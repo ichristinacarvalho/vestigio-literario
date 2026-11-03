@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Vestígio é uma publicação literária independente dedicada a resenhas, indicações de livros e reflexões sobre histórias que permanecem depois da última página.">
+    <meta name="author" content="Isabella Carvalho">
+
+    <link rel="shortcut icon" href="./img/icon.jpg" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,100..1000&display=swap"
+        rel="stylesheet">
+
+    <title>Vestígio</title>
+</head>
+
+<body>
+
+    <!-- Capa-->
+    <section id="inicio">
+        <div class="capa">
+            <img src="./img/capa.jpg" alt="Vestígio - Literatura, Memória e Impressões" class="img-fluid w-100">
+        </div>
+    </section>
+
+    <!-- Cabeçalho Limpo e Navegação -->
+    <header class="sticky-top">
+        <div class="container">
+
+            <!-- Barra Editorial Integrada -->
+            <div class="barra-editorial d-flex flex-column flex-lg-row justify-content-between align-items-center py-3">
+
+                <!-- Identidade (Esquerda) -->
+                <p class="identificador-marca mb-3 mb-lg-0">
+                    Publicação literária independente
+                </p>
+
+                <!-- Navegação (Direita) -->
+                <nav class="navbar navbar-expand-lg p-0" aria-label="Navegação principal">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar"
+                        aria-controls="menuNavbar" aria-expanded="false" aria-label="Alternar navegação">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="menuNavbar">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 gap-lg-4">
+                            <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#indicacao">Indicação do mês</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#resenhas">Resenhas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#newsletter">Newsletter</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+
+        <!-- Indicação do mês -->
+        <section id="indicacao" class="py-5">
+            <div class="container">
+                <div class="row align-items-center py-4">
+
+                    <!-- Coluna da Imagem (Esquerda) -->
+                    <div class="col-md-5 position-relative mb-5 mb-md-0 text-center text-md-start">
+                        <!-- Retângulo de fundo para dar aquele toque de design -->
+                        <div class="detalhe-fundo"></div>
+
+                        <!-- Coloque o caminho de uma imagem real de livro aqui para ver o efeito -->
+                        <div class="moldura-livro">
+                            <img src="./img/capas/livro1.jpg" alt="Capa do livro indicado" class="img-fluid shadow-lg">
+                        </div>
+                    </div>
+
+                    <!-- Coluna do Texto (Direita) -->
+                    <div class="col-md-7 ps-md-5 text-center text-md-start">
+
+                        <p class="indicacao-identificador">
+                            Leitura em Destaque
+                        </p>
+
+                        <h2 class="titulo-secao mb-4">Indicação do mês</h2>
+
+                        <h3 class="nome-livro">O Nome do Livro</h3>
+                        <p class="autor-livro">por <em>Nome do Autor</em></p>
+
+                        <p class="resumo-livro mt-4">
+                            Uma breve e envolvente apresentação da história vai aqui. Este é o espaço perfeito para
+                            fisgar o leitor com duas ou três linhas sobre a atmosfera da obra antes que ele decida
+                            clicar.
+                        </p>
+
+                        <a href="#" class="btn-leitura mt-4">
+                            Leia a resenha completa <span class="seta">→</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resenhas -->
+        <section id="resenhas" class="py-5">
+            <div class="container py-5">
+
+                <div class="text-center mb-5">
+                    <h2 class="titulo-secao">Histórias que permaneceram</h2>
+                    <p class="subtitulo-secao mx-auto">
+                        Algumas histórias terminam na última página. Outras continuam conosco.
+                    </p>
+                </div>
+
+                <div id="carouselResenhas" class="carousel slide carousel-dark" data-bs-ride="carousel"
+                    aria-label="Carrossel de resenhas literárias">
+                    <div class="carousel-inner px-md-5">
+
+                        <!-- Livro 1 -->
+                        <div class="carousel-item active">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-8 col-md-4 text-center mb-4 mb-md-0">
+                                    <img src="./img/capas/livro1.jpg" class="img-fluid sombra-livro"
+                                        alt="Capa do primeiro livro">
+                                </div>
+                                <div class="col-md-6 text-center text-md-start">
+                                    <span class="genero-livro">Romance de Formação</span>
+                                    <h3 class="titulo-livro mt-2">Título do livro</h3>
+                                    <p class="autor-livro">por <em>Nome do Autor</em></p>
+                                    <p class="resumo-livro mt-3">
+                                        Uma história que deixa marcas. Aprofunde-se nesta narrativa sobre memória, perda
+                                        e os vestígios que carregamos.
+                                    </p>
+                                    <a href="#" class="btn-resenha mt-3">
+                                        Leia a resenha completa <span class="seta">→</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Livro 2 -->
+                        <div class="carousel-item">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-8 col-md-4 text-center mb-4 mb-md-0">
+                                    <img src="./img/capas/livro2.jpg" class="img-fluid sombra-livro"
+                                        alt="Capa do segundo livro">
+                                </div>
+                                <div class="col-md-6 text-center text-md-start">
+                                    <span class="genero-livro">Fantasia Épica</span>
+                                    <h3 class="titulo-livro mt-2">O Segundo Livro</h3>
+                                    <p class="autor-livro">por <em>Outro Autor</em></p>
+                                    <p class="resumo-livro mt-3">
+                                        Uma leitura inesquecível que nos transporta para outras realidades enquanto nos
+                                        faz questionar a nossa própria.
+                                    </p>
+                                    <a href="#" class="btn-resenha mt-3">
+                                        Leia a resenha completa <span class="seta">→</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Adicione o Livro 3 seguindo a mesma estrutura da div "carousel-item" acima -->
+
+                    </div>
+
+                    <!-- Botão anterior -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselResenhas"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+
+                    <!-- Botão próximo -->
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselResenhas"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre -->
+        <section id="sobre" class="py-5">
+            <div class="container py-5">
+                <div class="row align-items-center">
+
+                    <!-- Coluna da Foto (Esquerda) -->
+                    <div class="col-md-5 mb-5 mb-md-0 position-relative text-center text-md-start">
+                        <div class="foto-moldura">
+                            <!-- Coloque uma foto sua ou uma imagem conceitual aqui -->
+                            <img src="./img/autora.jpg" alt="Foto de Isabella Carvalho"
+                                class="img-fluid foto-autora shadow-lg">
+                            <div class="foto-detalhe"></div>
+                        </div>
+                    </div>
+
+                    <!-- Coluna do Texto (Direita) -->
+                    <div class="col-md-6 offset-md-1 text-center text-md-start">
+                        <div class="sobre-conteudo">
+
+                            <p class="sobre-identificador mb-2">
+                                Por trás das páginas
+                            </p>
+
+                            <h2 class="titulo-sobre mb-4">Sobre o Vestígio</h2>
+
+                            <p class="sobre-destaque mb-4">
+                                "Vestígio nasceu da ideia de que algumas histórias nunca terminam de verdade."
+                            </p>
+
+                            <p>
+                                Entre páginas, personagens e palavras, existem narrativas que deixam marcas. Algumas nos
+                                inquietam, outras nos acolhem; algumas permanecem conosco muito depois da última página.
+                            </p>
+
+                            <p>
+                                Este é um espaço dedicado a essas histórias. Um lugar para compartilhar leituras,
+                                impressões e reflexões, sem a pretensão de encontrar respostas definitivas.
+                            </p>
+
+                            <p>
+                                Porque, às vezes, o mais importante de uma história não é aquilo que ela conta, mas o
+                                vestígio que nos deixa.
+                            </p>
+
+                            <div class="sobre-assinatura mt-5">
+                                <span class="d-block mb-1">Idealizado por</span>
+                                <p class="assinatura-nome">Isabella Carvalho</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section id="newsletter" class="py-5">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+
+                        <!-- Moldura estilo carta -->
+                        <div class="newsletter-wrapper p-4 p-md-5">
+                            <div class="row align-items-center">
+
+                                <!-- Coluna do Formulário (Esquerda) -->
+                                <div class="col-md-7 pe-md-5 mb-5 mb-md-0 text-center text-md-start">
+
+                                    <p class="newsletter-identificador mb-2">
+                                        Correspondência Literária
+                                    </p>
+
+                                    <h2 class="titulo-newsletter mb-3">Cartas deixadas pelo caminho</h2>
+
+                                    <p class="texto-newsletter mb-5">
+                                        Algumas histórias merecem ser compartilhadas. Receba notícias sobre novas
+                                        resenhas, indicações literárias e histórias que merecem permanecer.
+                                    </p>
+
+                                    <!-- Formulário Minimalista -->
+                                    <form id="formNewsletter">
+                                        <div class="mb-4">
+                                            <input type="text" class="form-control form-editorial" id="nome" name="nome"
+                                                placeholder="Como podemos chamar você?" required>
+                                        </div>
+
+                                        <div class="mb-4">
+                                            <input type="email" class="form-control form-editorial" id="email"
+                                                name="email" placeholder="seuemail@exemplo.com" required>
+                                        </div>
+
+                                        <div class="form-check text-start mb-4">
+                                            <input type="checkbox" class="form-check-input check-editorial"
+                                                id="consentimento" name="consentimento" required>
+                                            <label class="form-check-label label-editorial" for="consentimento">
+                                                Aceito receber novidades e comunicações do Vestígio por e-mail.
+                                            </label>
+                                        </div>
+
+                                        <button type="submit" class="btn-assinar w-100 w-md-auto">
+                                            Quero receber as cartas <span class="seta">→</span>
+                                        </button>
+                                    </form>
+
+                                </div>
+
+                                <!-- Coluna do Ritmo de Leitura (Direita) -->
+                                <div class="col-md-5">
+                                    <div class="caixa-ritmo p-4 p-md-5 text-center text-md-start shadow-sm">
+
+                                        <h3 class="ritmo-titulo mb-3">Nosso ritmo de leitura</h3>
+
+                                        <p class="ritmo-texto">
+                                            Todo dia 15, uma nova indicação do mês. Novas resenhas são publicadas ao
+                                            longo do mês, sem calendário fixo.
+                                        </p>
+
+                                        <hr class="divisor-ritmo">
+
+                                        <p class="ritmo-texto mb-0">
+                                            Sem pressa, sem excesso. Apenas histórias que merecem ser compartilhadas.
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="pt-5 pb-3">
+            <div class="container mt-4">
+                <div class="row mb-5 justify-content-between">
+
+                    <!-- Coluna 1: Identidade -->
+                    <div class="col-md-4 mb-5 mb-md-0 text-center text-md-start">
+                        <h2 class="footer-marca mb-3">Vestígio</h2>
+                        <p class="footer-tagline">Aquilo que uma história deixa em nós.</p>
+                        <p class="footer-descricao">Publicação literária independente.</p>
+                    </div>
+
+                    <!-- Coluna 2: Navegação -->
+                    <div class="col-md-3 mb-5 mb-md-0 text-center text-md-start">
+                        <h3 class="footer-titulo mb-4">Explore</h3>
+                        <ul class="footer-links list-unstyled">
+                            <li class="mb-2"><a href="#inicio">Início</a></li>
+                            <li class="mb-2"><a href="#indicacao">Indicação do mês</a></li>
+                            <li class="mb-2"><a href="#resenhas">Resenhas</a></li>
+                            <li class="mb-2"><a href="#sobre">Sobre</a></li>
+                            <li><a href="#newsletter">Newsletter</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna 3: Contato -->
+                    <div class="col-md-4 text-center text-md-start">
+                        <h3 class="footer-titulo mb-4">Indique um livro</h3>
+                        <p class="footer-descricao mb-4">
+                            Conhece uma história que merece permanecer? Escreva para nós e compartilhe as suas
+                            impressões.
+                        </p>
+                        <a href="mailto:seuemail@exemplo.com" class="footer-email">
+                            Enviar correspondência <span class="seta">→</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Rodapé Final -->
+                <div class="row footer-final pt-4">
+                    <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                        <p>© 2026 Vestígio. Todos os direitos reservados.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p>Idealizado por Isabella Carvalho.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>

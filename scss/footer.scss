@@ -1,0 +1,96 @@
+@use 'variaveis' as *;
+
+footer {
+    background-color: $cor-tinta;
+    color: $cor-papel;
+    border-top: 4px solid $cor-vinho; // Linha de remate no topo do rodapé
+
+    .footer-marca {
+        font-family: $fonte-destaque;
+        font-size: 3.5rem;
+        color: $cor-mostarda;
+        line-height: 1;
+    }
+
+    .footer-tagline {
+        font-family: $fonte-destaque;
+        font-size: 1.4rem;
+        font-style: italic;
+        color: $cor-papel;
+        margin-bottom: 5px;
+    }
+
+    .footer-descricao {
+        font-family: $fonte-padrao;
+        font-size: 0.95rem;
+        opacity: 0.7;
+        line-height: 1.6;
+    }
+
+    .footer-titulo {
+        font-family: $fonte-padrao;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: $cor-salvia;
+    }
+
+    .footer-links {
+        a {
+            font-family: $fonte-padrao;
+            color: $cor-papel;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            display: inline-block;
+
+            &:hover {
+                color: $cor-mostarda;
+                opacity: 1;
+                transform: translateX(5px); // Pequeno salto para a direita ao passar o rato
+            }
+        }
+    }
+
+    .footer-email {
+        display: inline-block;
+        font-family: $fonte-padrao;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 12px;
+        font-weight: bold;
+        color: $cor-mostarda;
+        text-decoration: none;
+        border-bottom: 1px solid rgba($cor-mostarda, 0.4);
+        padding-bottom: 4px;
+        transition: all 0.3s ease;
+
+        .seta {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            margin-left: 5px;
+        }
+
+        &:hover {
+            color: $cor-papel;
+            border-color: $cor-papel;
+            
+            .seta {
+                transform: translateX(6px);
+            }
+        }
+    }
+
+    .footer-final {
+        border-top: 1px solid rgba($cor-papel, 0.1);
+        
+        p {
+            font-family: $fonte-padrao;
+            font-size: 0.85rem;
+            opacity: 0.5;
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+    }
+}

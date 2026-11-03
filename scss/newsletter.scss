@@ -1,0 +1,149 @@
+@use 'variaveis' as *;
+
+#newsletter {
+    background-color: $cor-papel;
+    color: $cor-tinta;
+
+    // A moldura fina em volta de toda a secção
+    .newsletter-wrapper {
+        border: 1px solid rgba($cor-vinho, 0.3);
+        position: relative;
+        background-color: $cor-papel;
+        
+        // Detalhe de design: quebra a linha da borda no topo esquerdo
+        &::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 30px;
+            width: 60px;
+            height: 4px;
+            background-color: $cor-papel;
+        }
+    }
+
+    .newsletter-identificador {
+        font-family: $fonte-padrao;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        color: $cor-vinho;
+        text-transform: uppercase;
+    }
+
+    .titulo-newsletter {
+        font-family: $fonte-destaque;
+        font-size: clamp(2.5rem, 4vw, 3.5rem);
+        color: $cor-tinta;
+        line-height: 1.1;
+    }
+
+    .texto-newsletter {
+        font-family: $fonte-padrao;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        opacity: 0.9;
+    }
+
+    // Formulário sem caixas, apenas linhas de sublinhado
+    .form-editorial {
+        border: none;
+        border-bottom: 1px solid rgba($cor-tinta, 0.3);
+        border-radius: 0;
+        background-color: transparent;
+        padding: 10px 0;
+        font-family: $fonte-padrao;
+        font-size: 1rem;
+        color: $cor-tinta;
+        box-shadow: none;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            border-bottom: 1px solid $cor-vinho;
+            outline: none;
+            background-color: transparent;
+        }
+
+        &::placeholder {
+            color: rgba($cor-tinta, 0.4);
+            font-style: italic;
+        }
+    }
+
+    .check-editorial {
+        border-color: $cor-vinho;
+        cursor: pointer;
+
+        &:checked {
+            background-color: $cor-vinho;
+            border-color: $cor-vinho;
+        }
+        
+        &:focus {
+            box-shadow: 0 0 0 0.25rem rgba($cor-vinho, 0.2);
+        }
+    }
+
+    .label-editorial {
+        font-family: $fonte-padrao;
+        font-size: 0.9rem;
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    .btn-assinar {
+        background-color: $cor-tinta;
+        color: $cor-papel;
+        border: 1px solid $cor-tinta;
+        padding: 14px 28px;
+        font-family: $fonte-padrao;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 12px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        margin-top: 15px;
+
+        .seta {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            margin-left: 5px;
+        }
+
+        &:hover {
+            background-color: $cor-vinho;
+            border-color: $cor-vinho;
+            color: $cor-papel;
+            
+            .seta {
+                transform: translateX(6px);
+            }
+        }
+    }
+
+    // O bloco de cor com a rotina de leitura
+    .caixa-ritmo {
+        background-color: $cor-rosa-envelhecido;
+        color: $cor-tinta;
+        border-radius: 2px;
+
+        .ritmo-titulo {
+            font-family: $fonte-destaque;
+            font-size: 2.2rem;
+            font-style: italic;
+            color: $cor-vinho;
+        }
+
+        .ritmo-texto {
+            font-family: $fonte-padrao;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .divisor-ritmo {
+            border-color: rgba($cor-vinho, 0.4);
+            opacity: 1;
+            margin: 20px 0;
+        }
+    }
+}

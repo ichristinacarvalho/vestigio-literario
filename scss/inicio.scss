@@ -1,0 +1,16 @@
+@use 'variaveis' as *;
+
+// CAPA PRINCIPAL
+#inicio {
+    width: 100%;
+
+    .capa {
+        width: 100%;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+}

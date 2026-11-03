@@ -1,0 +1,64 @@
+@use 'variaveis' as *;
+
+header {
+    background-color: $cor-papel;
+    z-index: 1020; // Garante que fica sempre por cima
+    transition: box-shadow 0.3s ease;
+
+    // Quando o menu rola pela página, ganha uma sombra subtil
+    &.sticky-top {
+        top: 0;
+        box-shadow: 0 4px 15px rgba(41, 43, 53, 0.05);
+    }
+
+    .barra-editorial {
+        // As duas linhas que criam o efeito de revista
+        border-top: 1px solid $cor-vinho;
+        border-bottom: 1px solid $cor-vinho;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .identificador-marca {
+        font-family: $fonte-padrao;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: $cor-vinho;
+        text-transform: uppercase;
+        margin: 0;
+
+        // O truque da pipe (borda lateral) apenas para ecrãs maiores (computador/tablet)
+        @media (min-width: 992px) {
+            border-right: 1px solid $cor-vinho;
+            padding-right: 25px; // Espaço entre o texto e a linha
+            margin-right: 15px;  // Espaço entre a linha e o menu
+        }
+    }
+
+    nav {
+        .navbar-nav {
+            .nav-link {
+                font-family: $fonte-padrao;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                color: $cor-tinta;
+                text-transform: uppercase;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $cor-mostarda;
+                }
+            }
+        }
+
+        .navbar-toggler {
+            border-color: $cor-vinho;
+            
+            &:focus {
+                box-shadow: 0 0 0 0.2rem rgba($cor-vinho, 0.2);
+            }
+        }
+    }
+}

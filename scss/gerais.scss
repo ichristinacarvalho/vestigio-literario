@@ -1,0 +1,16 @@
+@use 'variaveis' as *;
+
+//RESET
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//BODY
+body {
+    font-family: $fonte-padrao;
+
+    background: $cor-papel;
+    color: $cor-tinta;
+}

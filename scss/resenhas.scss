@@ -1,0 +1,93 @@
+@use 'variaveis' as *;
+
+#resenhas {
+    background-color: $cor-papel; // De volta à cor do header
+    color: $cor-tinta;
+    padding: 80px 0;
+
+    .titulo-secao {
+        font-family: $fonte-destaque;
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        color: $cor-tinta; // Texto escuro
+        font-style: italic;
+        margin-bottom: 10px;
+    }
+
+    .subtitulo-secao {
+        font-family: $fonte-padrao;
+        font-size: 1.1rem;
+        color: $cor-vinho; // Toque da paleta da marca
+        max-width: 600px;
+    }
+
+    // Tratamento da imagem do livro
+    .sombra-livro {
+        border-radius: 4px;
+        box-shadow: 0 15px 35px rgba(41, 43, 53, 0.15); // Sombra mais suave e elegante para fundo claro
+        max-height: 400px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+
+    .genero-livro {
+        font-family: $fonte-padrao;
+        font-size: 12px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: $cor-vinho;
+    }
+
+    .titulo-livro {
+        font-family: $fonte-destaque;
+        font-size: clamp(2rem, 4vw, 3rem);
+        color: $cor-tinta;
+        line-height: 1.1;
+    }
+
+    .autor-livro {
+        font-family: $fonte-padrao;
+        color: $cor-tinta;
+        opacity: 0.8;
+        font-size: 1.1rem;
+    }
+
+    .resumo-livro {
+        font-family: $fonte-padrao;
+        line-height: 1.8;
+        font-size: 1.05rem;
+        color: $cor-tinta;
+        opacity: 0.9;
+    }
+
+    .btn-resenha {
+        display: inline-block;
+        font-family: $fonte-padrao;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 13px;
+        font-weight: bold;
+        color: $cor-vinho;
+        text-decoration: none;
+        border-bottom: 1px solid rgba($cor-vinho, 0.4);
+        padding-bottom: 4px;
+        transition: all 0.3s ease;
+
+        .seta {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover {
+            color: $cor-tinta;
+            border-color: $cor-tinta;
+            
+            .seta {
+                transform: translateX(8px);
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+@use 'variaveis' as *;
+
+#sobre {
+    background-color: $cor-papel;
+    color: $cor-tinta;
+    padding: 60px 0;
+    overflow: hidden;
+
+    // Estilo da foto estilo editorial
+    .foto-moldura {
+        position: relative;
+        display: inline-block;
+        z-index: 2;
+
+        .foto-autora {
+            border-radius: 2px;
+            max-width: 85%;
+            position: relative;
+            z-index: 2;
+            filter: sepia(0.2) contrast(1.1); // Dá um leve tom vintage à foto
+            transition: filter 0.5s ease;
+
+            &:hover {
+                filter: sepia(0) contrast(1); // Revela as cores reais ao passar o mouse
+            }
+        }
+
+        // Bloco de cor deslocado atrás da foto
+        .foto-detalhe {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            width: 70%;
+            height: 70%;
+            background-color: $cor-rosa-envelhecido;
+            z-index: 1;
+        }
+    }
+
+    .sobre-identificador {
+        font-family: $fonte-padrao;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        color: $cor-vinho;
+        text-transform: uppercase;
+    }
+
+    .titulo-sobre {
+        font-family: $fonte-destaque;
+        font-size: clamp(3rem, 5vw, 4.5rem);
+        color: $cor-tinta;
+        line-height: 1;
+    }
+
+    // A frase de impacto ganha destaque com a cor vinho e uma barra lateral
+    .sobre-destaque {
+        font-family: $fonte-destaque;
+        font-size: 1.6rem;
+        font-style: italic;
+        color: $cor-vinho;
+        line-height: 1.4;
+        border-left: 3px solid $cor-mostarda;
+        padding-left: 20px;
+    }
+
+    p {
+        font-family: $fonte-padrao;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        opacity: 0.9;
+        margin-bottom: 15px;
+    }
+
+    .sobre-assinatura {
+        span {
+            font-family: $fonte-padrao;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: $cor-salvia;
+            font-weight: bold;
+        }
+
+        // O truque da assinatura à mão
+        .assinatura-nome {
+            font-family: $fonte-anotacao; // Aplica a fonte manuscrita Caveat
+            font-size: 3.5rem;
+            color: $cor-tinta;
+            line-height: 0.8;
+            margin: 0;
+            transform: rotate(-3deg); // Inclina levemente para parecer escrito na hora
+        }
+    }
+}

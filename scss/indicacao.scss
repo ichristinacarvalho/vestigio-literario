@@ -1,0 +1,104 @@
+@use 'variaveis' as *;
+
+#indicacao {
+    background-color: $cor-papel;
+    padding: $espacamento-secao 0;
+    overflow: hidden; // Evita que o fundo passe das bordas
+
+    .indicacao-identificador {
+        font-family: $fonte-padrao;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        color: $cor-vinho;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .titulo-secao {
+        font-family: $fonte-destaque;
+        font-size: clamp(3rem, 5vw, 4.5rem);
+        color: $cor-tinta;
+        font-style: italic; // Deixa o título mais sofisticado
+        line-height: 1;
+    }
+
+    // O truque editorial da imagem
+    .moldura-livro {
+        position: relative;
+        z-index: 2;
+        max-width: 350px; // Controla o tamanho do livro
+        margin: 0 auto;
+        
+        img {
+            border-radius: 4px;
+            transition: transform 0.4s ease; // Efeito suave
+            
+            &:hover {
+                transform: translateY(-10px); // Levanta o livro ao passar o mouse
+            }
+        }
+    }
+
+    // A forma geométrica atrás do livro
+    .detalhe-fundo {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        width: 80%;
+        height: 90%;
+        background-color: $cor-rosa-envelhecido; // Um bloco de cor para dar destaque
+        z-index: 1;
+        border-radius: 8px;
+    }
+
+    .nome-livro {
+        font-family: $fonte-destaque;
+        font-size: 2.5rem;
+        color: $cor-vinho;
+        margin-bottom: 0;
+    }
+
+    .autor-livro {
+        font-family: $fonte-padrao;
+        font-size: 1.1rem;
+        color: $cor-tinta;
+        opacity: 0.8;
+    }
+
+    .resumo-livro {
+        font-family: $fonte-padrao;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: $cor-tinta;
+        max-width: 600px;
+    }
+
+    .btn-leitura {
+        display: inline-block;
+        font-family: $fonte-padrao;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 14px;
+        font-weight: bold;
+        color: $cor-vinho;
+        text-decoration: none;
+        border-bottom: 2px solid $cor-vinho;
+        padding-bottom: 4px;
+        transition: all 0.3s ease;
+
+        .seta {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover {
+            color: $cor-tinta;
+            border-color: $cor-tinta;
+
+            .seta {
+                transform: translateX(8px); // A seta corre para a direita
+            }
+        }
+    }
+}

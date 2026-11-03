@@ -1,0 +1,525 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  background: #F2EBDD;
+  color: #292B35;
+}
+
+header {
+  background-color: #F2EBDD;
+  z-index: 1020;
+  transition: box-shadow 0.3s ease;
+}
+header.sticky-top {
+  top: 0;
+  box-shadow: 0 4px 15px rgba(41, 43, 53, 0.05);
+}
+header .barra-editorial {
+  border-top: 1px solid #783F50;
+  border-bottom: 1px solid #783F50;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+header .identificador-marca {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #783F50;
+  text-transform: uppercase;
+  margin: 0;
+}
+@media (min-width: 992px) {
+  header .identificador-marca {
+    border-right: 1px solid #783F50;
+    padding-right: 25px;
+    margin-right: 15px;
+  }
+}
+header nav .navbar-nav .nav-link {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #292B35;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+header nav .navbar-nav .nav-link:hover {
+  color: #D7A65B;
+}
+header nav .navbar-toggler {
+  border-color: #783F50;
+}
+header nav .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(120, 63, 80, 0.2);
+}
+
+#inicio {
+  width: 100%;
+}
+#inicio .capa {
+  width: 100%;
+}
+#inicio .capa img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#sobre {
+  background-color: #F2EBDD;
+  color: #292B35;
+  padding: 60px 0;
+  overflow: hidden;
+}
+#sobre .foto-moldura {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+#sobre .foto-moldura .foto-autora {
+  border-radius: 2px;
+  max-width: 85%;
+  position: relative;
+  z-index: 2;
+  filter: sepia(0.2) contrast(1.1);
+  transition: filter 0.5s ease;
+}
+#sobre .foto-moldura .foto-autora:hover {
+  filter: sepia(0) contrast(1);
+}
+#sobre .foto-moldura .foto-detalhe {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 70%;
+  height: 70%;
+  background-color: #D8BEB2;
+  z-index: 1;
+}
+#sobre .sobre-identificador {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #783F50;
+  text-transform: uppercase;
+}
+#sobre .titulo-sobre {
+  font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  color: #292B35;
+  line-height: 1;
+}
+#sobre .sobre-destaque {
+  font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #783F50;
+  line-height: 1.4;
+  border-left: 3px solid #D7A65B;
+  padding-left: 20px;
+}
+#sobre p {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+#sobre .sobre-assinatura span {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #A9A58F;
+  font-weight: bold;
+}
+#sobre .sobre-assinatura .assinatura-nome {
+  font-family: "Caveat", Arial, Helvetica, sans-serif;
+  font-size: 3.5rem;
+  color: #292B35;
+  line-height: 0.8;
+  margin: 0;
+  transform: rotate(-3deg);
+}
+
+#resenhas {
+  background-color: #F2EBDD;
+  color: #292B35;
+  padding: 80px 0;
+}
+#resenhas .titulo-secao {
+  font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #292B35;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+#resenhas .subtitulo-secao {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  color: #783F50;
+  max-width: 600px;
+}
+#resenhas .sombra-livro {
+  border-radius: 4px;
+  box-shadow: 0 15px 35px rgba(41, 43, 53, 0.15);
+  max-height: 400px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+#resenhas .sombra-livro:hover {
+  transform: scale(1.03);
+}
+#resenhas .genero-livro {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #783F50;
+}
+#resenhas .titulo-livro {
+  font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #292B35;
+  line-height: 1.1;
+}
+#resenhas .autor-livro {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  color: #292B35;
+  opacity: 0.8;
+  font-size: 1.1rem;
+}
+#resenhas .resumo-livro {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #292B35;
+  opacity: 0.9;
+}
+#resenhas .btn-resenha {
+  display: inline-block;
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #783F50;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(120, 63, 80, 0.4);
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+}
+#resenhas .btn-resenha .seta {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+#resenhas .btn-resenha:hover {
+  color: #292B35;
+  border-color: #292B35;
+}
+#resenhas .btn-resenha:hover .seta {
+  transform: translateX(8px);
+}
+
+#indicacao {
+  background-color: #F2EBDD;
+  padding: 80px 0;
+  overflow: hidden;
+}
+#indicacao .indicacao-identificador {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #783F50;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+#indicacao .titulo-secao {
+  font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  color: #292B35;
+  font-style: italic;
+  line-height: 1;
+}
+#indicacao .moldura-livro {
+  position: relative;
+  z-index: 2;
+  max-width: 350px;
+  margin: 0 auto;
+}
+#indicacao .moldura-livro img {
+  border-radius: 4px;
+  transition: transform 0.4s ease;
+}
+#indicacao .moldura-livro img:hover {
+  transform: translateY(-10px);
+}
+#indicacao .detalhe-fundo {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 80%;
+  height: 90%;
+  background-color: #D8BEB2;
+  z-index: 1;
+  border-radius: 8px;
+}
+#indicacao .nome-livro {
+  font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  color: #783F50;
+  margin-bottom: 0;
+}
+#indicacao .autor-livro {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  color: #292B35;
+  opacity: 0.8;
+}
+#indicacao .resumo-livro {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #292B35;
+  max-width: 600px;
+}
+#indicacao .btn-leitura {
+  display: inline-block;
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #783F50;
+  text-decoration: none;
+  border-bottom: 2px solid #783F50;
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+}
+#indicacao .btn-leitura .seta {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+#indicacao .btn-leitura:hover {
+  color: #292B35;
+  border-color: #292B35;
+}
+#indicacao .btn-leitura:hover .seta {
+  transform: translateX(8px);
+}
+
+#newsletter {
+  background-color: #F2EBDD;
+  color: #292B35;
+}
+#newsletter .newsletter-wrapper {
+  border: 1px solid rgba(120, 63, 80, 0.3);
+  position: relative;
+  background-color: #F2EBDD;
+}
+#newsletter .newsletter-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 30px;
+  width: 60px;
+  height: 4px;
+  background-color: #F2EBDD;
+}
+#newsletter .newsletter-identificador {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #783F50;
+  text-transform: uppercase;
+}
+#newsletter .titulo-newsletter {
+  font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: #292B35;
+  line-height: 1.1;
+}
+#newsletter .texto-newsletter {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+#newsletter .form-editorial {
+  border: none;
+  border-bottom: 1px solid rgba(41, 43, 53, 0.3);
+  border-radius: 0;
+  background-color: transparent;
+  padding: 10px 0;
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #292B35;
+  box-shadow: none;
+  transition: border-color 0.3s ease;
+}
+#newsletter .form-editorial:focus {
+  border-bottom: 1px solid #783F50;
+  outline: none;
+  background-color: transparent;
+}
+#newsletter .form-editorial::placeholder {
+  color: rgba(41, 43, 53, 0.4);
+  font-style: italic;
+}
+#newsletter .check-editorial {
+  border-color: #783F50;
+  cursor: pointer;
+}
+#newsletter .check-editorial:checked {
+  background-color: #783F50;
+  border-color: #783F50;
+}
+#newsletter .check-editorial:focus {
+  box-shadow: 0 0 0 0.25rem rgba(120, 63, 80, 0.2);
+}
+#newsletter .label-editorial {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  cursor: pointer;
+}
+#newsletter .btn-assinar {
+  background-color: #292B35;
+  color: #F2EBDD;
+  border: 1px solid #292B35;
+  padding: 14px 28px;
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+#newsletter .btn-assinar .seta {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  margin-left: 5px;
+}
+#newsletter .btn-assinar:hover {
+  background-color: #783F50;
+  border-color: #783F50;
+  color: #F2EBDD;
+}
+#newsletter .btn-assinar:hover .seta {
+  transform: translateX(6px);
+}
+#newsletter .caixa-ritmo {
+  background-color: #D8BEB2;
+  color: #292B35;
+  border-radius: 2px;
+}
+#newsletter .caixa-ritmo .ritmo-titulo {
+  font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+  font-size: 2.2rem;
+  font-style: italic;
+  color: #783F50;
+}
+#newsletter .caixa-ritmo .ritmo-texto {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+#newsletter .caixa-ritmo .divisor-ritmo {
+  border-color: rgba(120, 63, 80, 0.4);
+  opacity: 1;
+  margin: 20px 0;
+}
+
+footer {
+  background-color: #292B35;
+  color: #F2EBDD;
+  border-top: 4px solid #783F50;
+}
+footer .footer-marca {
+  font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+  font-size: 3.5rem;
+  color: #D7A65B;
+  line-height: 1;
+}
+footer .footer-tagline {
+  font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #F2EBDD;
+  margin-bottom: 5px;
+}
+footer .footer-descricao {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+footer .footer-titulo {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #A9A58F;
+}
+footer .footer-links a {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  color: #F2EBDD;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+footer .footer-links a:hover {
+  color: #D7A65B;
+  opacity: 1;
+  transform: translateX(5px);
+}
+footer .footer-email {
+  display: inline-block;
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #D7A65B;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(215, 166, 91, 0.4);
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+}
+footer .footer-email .seta {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  margin-left: 5px;
+}
+footer .footer-email:hover {
+  color: #F2EBDD;
+  border-color: #F2EBDD;
+}
+footer .footer-email:hover .seta {
+  transform: translateX(6px);
+}
+footer .footer-final {
+  border-top: 1px solid rgba(242, 235, 221, 0.1);
+}
+footer .footer-final p {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  opacity: 0.5;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/*# sourceMappingURL=style.css.map */
