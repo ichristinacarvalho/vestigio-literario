@@ -3,7 +3,7 @@
 #indicacao {
     background-color: $cor-papel;
     padding: $espacamento-secao 0;
-    overflow: hidden; // Evita que o fundo passe das bordas
+    overflow: hidden;
 
     .indicacao-identificador {
         font-family: $fonte-padrao;
@@ -19,35 +19,33 @@
         font-family: $fonte-destaque;
         font-size: clamp(3rem, 5vw, 4.5rem);
         color: $cor-tinta;
-        font-style: italic; // Deixa o título mais sofisticado
+        font-style: italic;
         line-height: 1;
     }
 
-    // O truque editorial da imagem
     .moldura-livro {
         position: relative;
         z-index: 2;
-        max-width: 350px; // Controla o tamanho do livro
+        max-width: 350px;
         margin: 0 auto;
-        
+
         img {
             border-radius: 4px;
-            transition: transform 0.4s ease; // Efeito suave
-            
+            transition: transform 0.4s ease;
+
             &:hover {
-                transform: translateY(-10px); // Levanta o livro ao passar o mouse
+                transform: translateY(-10px);
             }
         }
     }
 
-    // A forma geométrica atrás do livro
     .detalhe-fundo {
         position: absolute;
         top: 10%;
         left: 5%;
         width: 80%;
         height: 90%;
-        background-color: $cor-rosa-envelhecido; // Um bloco de cor para dar destaque
+        background-color: $cor-rosa-envelhecido;
         z-index: 1;
         border-radius: 8px;
     }
@@ -97,7 +95,7 @@
             border-color: $cor-tinta;
 
             .seta {
-                transform: translateX(8px); // A seta corre para a direita
+                transform: translateX(8px);
             }
         }
     }

@@ -4,13 +4,11 @@
     background-color: $cor-papel;
     color: $cor-tinta;
 
-    // A moldura fina em volta de toda a secção
     .newsletter-wrapper {
         border: 1px solid rgba($cor-vinho, 0.3);
         position: relative;
         background-color: $cor-papel;
-        
-        // Detalhe de design: quebra a linha da borda no topo esquerdo
+
         &::before {
             content: '';
             position: absolute;
@@ -45,7 +43,6 @@
         opacity: 0.9;
     }
 
-    // Formulário sem caixas, apenas linhas de sublinhado
     .form-editorial {
         border: none;
         border-bottom: 1px solid rgba($cor-tinta, 0.3);
@@ -78,7 +75,7 @@
             background-color: $cor-vinho;
             border-color: $cor-vinho;
         }
-        
+
         &:focus {
             box-shadow: 0 0 0 0.25rem rgba($cor-vinho, 0.2);
         }
@@ -114,14 +111,13 @@
             background-color: $cor-vinho;
             border-color: $cor-vinho;
             color: $cor-papel;
-            
+
             .seta {
                 transform: translateX(6px);
             }
         }
     }
 
-    // O bloco de cor com a rotina de leitura
     .caixa-ritmo {
         background-color: $cor-rosa-envelhecido;
         color: $cor-tinta;

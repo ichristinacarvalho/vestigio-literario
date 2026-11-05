@@ -6,7 +6,6 @@
     padding: 60px 0;
     overflow: hidden;
 
-    // Estilo da foto estilo editorial
     .foto-moldura {
         position: relative;
         display: inline-block;
@@ -17,15 +16,14 @@
             max-width: 85%;
             position: relative;
             z-index: 2;
-            filter: sepia(0.2) contrast(1.1); // Dá um leve tom vintage à foto
+            filter: sepia(0.2) contrast(1.1);
             transition: filter 0.5s ease;
 
             &:hover {
-                filter: sepia(0) contrast(1); // Revela as cores reais ao passar o mouse
+                filter: sepia(0) contrast(1);
             }
         }
 
-        // Bloco de cor deslocado atrás da foto
         .foto-detalhe {
             position: absolute;
             bottom: -20px;
@@ -53,7 +51,6 @@
         line-height: 1;
     }
 
-    // A frase de impacto ganha destaque com a cor vinho e uma barra lateral
     .sobre-destaque {
         font-family: $fonte-destaque;
         font-size: 1.6rem;
@@ -82,14 +79,13 @@
             font-weight: bold;
         }
 
-        // O truque da assinatura à mão
         .assinatura-nome {
-            font-family: $fonte-anotacao; // Aplica a fonte manuscrita Caveat
+            font-family: $fonte-anotacao;
             font-size: 3.5rem;
             color: $cor-tinta;
             line-height: 0.8;
             margin: 0;
-            transform: rotate(-3deg); // Inclina levemente para parecer escrito na hora
+            transform: rotate(-3deg);
         }
     }
 }

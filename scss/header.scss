@@ -2,17 +2,15 @@
 
 header {
     background-color: $cor-papel;
-    z-index: 1020; // Garante que fica sempre por cima
+    z-index: 1020;
     transition: box-shadow 0.3s ease;
 
-    // Quando o menu rola pela página, ganha uma sombra subtil
     &.sticky-top {
         top: 0;
         box-shadow: 0 4px 15px rgba(41, 43, 53, 0.05);
     }
 
     .barra-editorial {
-        // As duas linhas que criam o efeito de revista
         border-top: 1px solid $cor-vinho;
         border-bottom: 1px solid $cor-vinho;
         margin-top: 20px;
@@ -28,11 +26,12 @@ header {
         text-transform: uppercase;
         margin: 0;
 
-        // O truque da pipe (borda lateral) apenas para ecrãs maiores (computador/tablet)
         @media (min-width: 992px) {
+            font-size: 12px;
+            letter-spacing: 3px;
             border-right: 1px solid $cor-vinho;
-            padding-right: 25px; // Espaço entre o texto e a linha
-            margin-right: 15px;  // Espaço entre a linha e o menu
+            padding-right: 25px;
+            margin-right: 15px;
         }
     }
 
@@ -55,7 +54,7 @@ header {
 
         .navbar-toggler {
             border-color: $cor-vinho;
-            
+
             &:focus {
                 box-shadow: 0 0 0 0.2rem rgba($cor-vinho, 0.2);
             }

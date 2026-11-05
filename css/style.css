@@ -36,6 +36,8 @@ header .identificador-marca {
 }
 @media (min-width: 992px) {
   header .identificador-marca {
+    font-size: 12px;
+    letter-spacing: 3px;
     border-right: 1px solid #783F50;
     padding-right: 25px;
     margin-right: 15px;
@@ -178,25 +180,6 @@ header nav .navbar-toggler:focus {
 #resenhas .sombra-livro:hover {
   transform: scale(1.03);
 }
-#resenhas .genero-livro {
-  font-family: "DM Sans", Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #783F50;
-}
-#resenhas .titulo-livro {
-  font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: #292B35;
-  line-height: 1.1;
-}
-#resenhas .autor-livro {
-  font-family: "DM Sans", Arial, Helvetica, sans-serif;
-  color: #292B35;
-  opacity: 0.8;
-  font-size: 1.1rem;
-}
 #resenhas .resumo-livro {
   font-family: "DM Sans", Arial, Helvetica, sans-serif;
   line-height: 1.8;
@@ -227,6 +210,59 @@ header nav .navbar-toggler:focus {
 }
 #resenhas .btn-resenha:hover .seta {
   transform: translateX(8px);
+}
+#resenhas .capa-padrao {
+  aspect-ratio: 2/3;
+  width: 100%;
+  object-fit: cover;
+}
+
+.sombra-livro {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: -15px 20px 0px #783F50;
+  transition: transform 0.4s ease;
+}
+.sombra-livro:hover {
+  transform: scale(1.03);
+}
+
+.comentario-caixa {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.comentario-caixa:hover {
+  transform: translateY(-2px);
+}
+
+.genero-livro {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #783F50;
+  font-weight: 700;
+}
+
+.titulo-livro {
+  font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #783F50;
+  line-height: 1.1;
+}
+
+.autor-livro {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  color: rgba(41, 43, 53, 0.6);
+  font-size: 1.1rem;
 }
 
 #indicacao {

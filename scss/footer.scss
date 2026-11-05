@@ -3,7 +3,7 @@
 footer {
     background-color: $cor-tinta;
     color: $cor-papel;
-    border-top: 4px solid $cor-vinho; // Linha de remate no topo do rodapé
+    border-top: 4px solid $cor-vinho; 
 
     .footer-marca {
         font-family: $fonte-destaque;
@@ -48,7 +48,7 @@ footer {
             &:hover {
                 color: $cor-mostarda;
                 opacity: 1;
-                transform: translateX(5px); // Pequeno salto para a direita ao passar o rato
+                transform: translateX(5px); 
             }
         }
     }
