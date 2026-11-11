@@ -77,15 +77,23 @@
             letter-spacing: 2px;
             color: $cor-salvia;
             font-weight: bold;
+            display: inline-block;
+            border-bottom: 1px solid rgba($cor-salvia, 0.3);
+            padding-bottom: 12px;
+            margin-bottom: 5px;
         }
 
         .assinatura-nome {
             font-family: $fonte-anotacao;
-            font-size: 3.5rem;
-            color: $cor-tinta;
+            font-size: 3.8rem;
+            color: $cor-vinho;
+            opacity: 0.9;
             line-height: 0.8;
             margin: 0;
-            transform: rotate(-3deg);
+            margin-left: 10px;
+            margin-top: 5px;
+            transform: rotate(-7deg);
+            transform-origin: left center;
         }
     }
 }
