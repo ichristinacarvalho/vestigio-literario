@@ -1,6 +1,6 @@
 //Importações
 import { db } from "./firebase-config.js";
-import { doc, getDoc, collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-firestore.js";
+import { doc, getDoc, collection, query, where, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-firestore.js";
 
 console.log("Status do Banco de Dados:", db);
 
@@ -100,3 +100,66 @@ async function carregarComentarios() {
 // Chamar a função quando a página carregar
 carregarResenha();
 carregarComentarios();
+
+//Identificar o formulário pelo ID exato do HTML
+const formComentarios = document.getElementById("form-comentario");
+
+if (formComentarios) {
+
+    formComentarios.addEventListener("submit", async (evento) => {
+        evento.preventDefault(); 
+
+        //Capturar os valores digitados 
+        const nomeValor = document.getElementById("nome").value;
+        const textoValor = document.getElementById("mensagem").value;
+
+        try {
+            //Mapear a coleção no Firebase
+            const colecaoComentarios = collection(db, "comentarios");
+            
+            //Enviar o documento para a coleção 'comentarios'
+            await addDoc(colecaoComentarios, {
+                nome_leitor: nomeValor,
+                texto: textoValor,
+                data: new Date().toLocaleDateString('pt-BR'),
+                id_livro: idLivro 
+            });
+
+            //Limpeza e Feedback
+            formComentarios.reset();
+            
+            // Atualizar a lista de comentários
+            carregarComentarios();
+
+            // Feedback visual 
+            const msgSucesso = document.createElement("p");
+            msgSucesso.innerHTML = "O seu vestígio foi deixado com sucesso. ✓";
+            msgSucesso.style.color = "var(--cor-vinho)";
+            msgSucesso.style.fontFamily = "var(--fonte-padrao)";
+            msgSucesso.style.fontStyle = "italic";
+            msgSucesso.style.marginTop = "15px";
+            
+            formComentarios.appendChild(msgSucesso);
+
+            // Apaga a mensagem de sucesso após 5 segundos
+            setTimeout(() => {
+                msgSucesso.remove();
+            }, 5000);
+
+        } catch (erro) {
+            console.error("Erro ao salvar comentário:", erro);
+            
+            const msgErro = document.createElement("p");
+            msgErro.innerHTML = "Ocorreu um erro ao enviar o comentário. Tente novamente.";
+            msgErro.style.color = "var(--cor-tinta)";
+            msgErro.style.fontFamily = "var(--fonte-padrao)";
+            msgErro.style.marginTop = "15px";
+            
+            formComentarios.appendChild(msgErro);
+            
+            setTimeout(() => {
+                msgErro.remove();
+            }, 5000);
+        }
+    });
+}

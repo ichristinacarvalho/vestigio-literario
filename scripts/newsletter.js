@@ -42,13 +42,36 @@ if (formNewsletter) {
                 console.error("Erro ao chamar a API de e-mail:", erroEmail);
             }
 
-            // Dar feedback ao leitor e limpar a casa
-            alert("Cartas a caminho! Sua inscrição foi confirmada com sucesso.");
+            // Dar feedback visual e elegante ao leitor
+            const mensagemSucesso = document.createElement("p");
+            mensagemSucesso.innerHTML = "Cartas a caminho! Sua inscrição foi confirmada com sucesso. ✓";
+            mensagemSucesso.style.color = "var(--cor-vinho)";
+            mensagemSucesso.style.fontFamily = "var(--fonte-padrao)";
+            mensagemSucesso.style.fontStyle = "italic";
+            mensagemSucesso.style.marginTop = "15px";
+            
+            formNewsletter.appendChild(mensagemSucesso);
             formNewsletter.reset();
+
+            // Faz a mensagem desaparecer suavemente após 5 segundos
+            setTimeout(() => {
+                mensagemSucesso.remove();
+            }, 5000);
 
         } catch (erro) {
             console.error("Erro ao salvar inscrição:", erro);
-            alert("Puxa, ocorreu um erro de conexão. Tente novamente em alguns instantes.");
+            
+            const mensagemErro = document.createElement("p");
+            mensagemErro.innerHTML = "Puxa, ocorreu um erro de conexão. Tente novamente em alguns instantes.";
+            mensagemErro.style.color = "var(--cor-tinta)";
+            mensagemErro.style.fontFamily = "var(--fonte-padrao)";
+            mensagemErro.style.marginTop = "15px";
+            
+            formNewsletter.appendChild(mensagemErro);
+            
+            setTimeout(() => {
+                mensagemErro.remove();
+            }, 5000);
         }
     });
 }
