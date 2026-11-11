@@ -97,7 +97,6 @@ async function carregarComentarios() {
     }
 }
 
-
 // Chamar a função quando a página carregar
 carregarResenha();
 carregarComentarios();

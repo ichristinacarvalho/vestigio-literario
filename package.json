@@ -1,0 +1,23 @@
+{
+  "name": "vestigio-literario",
+  "version": "1.0.0",
+  "description": "Bem-vindo ao repositório oficial do **Vestígio Literário**, uma plataforma digital voltada para o universo da leitura, compartilhamento de conteúdos e experiências literárias. Este projeto conta com uma arquitetura moderna que une front-end responsivo, banco de dados em nuvem e fluxos automatizados de comunicação.",
+  "homepage": "https://github.com/ichristinacarvalho/vestigio-literario#readme",
+  "bugs": {
+    "url": "https://github.com/ichristinacarvalho/vestigio-literario/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ichristinacarvalho/vestigio-literario.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "nodemailer": "^10.5.0"
+  }
+}

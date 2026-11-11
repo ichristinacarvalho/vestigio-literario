@@ -7,38 +7,44 @@ const formNewsletter = document.getElementById("formNewsletter");
 // Escuta o evento de "submit" 
 if (formNewsletter) {
     formNewsletter.addEventListener("submit", async (evento) => {
-        
-        evento.preventDefault(); 
+
+        evento.preventDefault();
 
         // Capturar os valores 
         const nomeValor = document.getElementById("nome").value;
         const emailValor = document.getElementById("email").value;
 
         try {
-            //Mapear a nova coleção no Firebase
+            // Mapear a nova coleção no Firebase
             const colecaoNewsletter = collection(db, "newsletter");
-            
-            //Enviar o documento
+
+            // Enviar o documento para a base de dados
             await addDoc(colecaoNewsletter, {
                 nome: nomeValor,
                 email: emailValor,
-                data_inscricao: new Date().toISOString() 
+                data_inscricao: new Date().toISOString()
             });
 
-            // Dispara o webhook do n8n em segundo plano
-fetch("http://localhost:5678/webhook/697c28f0-631a-4223-8434-1f02232b251b", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-        nome: nomeValor,
-        email: emailValor,
-        tipo: "boas_vindas"
-    })
-}).catch(err => console.log("Aviso: Webhook falhou, mas inscrição foi salva.", err));
+            // Chama a rota do Vercel para disparar o e-mail
+            try {
+                await fetch('/api/boas-vindas', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: emailValor, 
+                        nome: nomeValor   
+                    })
+                });
+                console.log("Aviso enviado para a agência de correios do Vercel!");
+            } catch (erroEmail) {
+                console.error("Erro ao chamar a API de e-mail:", erroEmail);
+            }
 
-            //Dar feedback ao leitor e limpar a casa
+            // Dar feedback ao leitor e limpar a casa
             alert("Cartas a caminho! Sua inscrição foi confirmada com sucesso.");
-            formNewsletter.reset(); 
+            formNewsletter.reset();
 
         } catch (erro) {
             console.error("Erro ao salvar inscrição:", erro);

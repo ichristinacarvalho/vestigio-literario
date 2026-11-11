@@ -10,7 +10,7 @@ async function carregarResenhas() {
 
         const prateleira = document.querySelector(".carousel-inner");
 
-        //Limpa a prateleira antes de começar a colocar livros (evita duplicações)
+        //Limpa a prateleira antes de começar a colocar livros 
         prateleira.innerHTML = "";
 
         // Variável para controlar qual é o primeiro livro 
@@ -23,10 +23,6 @@ async function carregarResenhas() {
             //Define se o cartão leva a classe "active" 
             let classeAtiva = isPrimeiro ? "active" : "";
             isPrimeiro = false;
-
-            // ==========================================
-            // LÓGICA DO BOTÃO DE RESENHA APLICADA AQUI
-            // ==========================================
             let botaoHTML = "";
 
             if (livro.link && livro.link !== "breve" && livro.link.trim() !== "") {
@@ -36,9 +32,7 @@ async function carregarResenhas() {
                 // Cenário 2: Ainda não há resenha (Gera um <span> bloqueado com os estilos que você definiu)
                 botaoHTML = `<span class="btn-resenha mt-3" style="cursor: not-allowed; opacity: 0.5; border-bottom: none; color: var(--cor-tinta); pointer-events: none; display: inline-block;">RESENHA EM BREVE</span>`;
             }
-            // ==========================================
 
-            //Constrói o HTML injetando a variável ${botaoHTML} no final
             let cartaoHTML = `
                 <div class="carousel-item ${classeAtiva}">
                     <div class="row align-items-center justify-content-center">
