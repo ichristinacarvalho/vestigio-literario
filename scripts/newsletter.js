@@ -33,8 +33,9 @@ if (formNewsletter) {
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        email: emailValor, 
-                        nome: nomeValor   
+                        email: emailValor,
+                        nome: nomeValor,
+                        site: document.getElementById("site").value
                     })
                 });
                 console.log("Aviso enviado para a agência de correios do Vercel!");
@@ -49,7 +50,7 @@ if (formNewsletter) {
             mensagemSucesso.style.fontFamily = "var(--fonte-padrao)";
             mensagemSucesso.style.fontStyle = "italic";
             mensagemSucesso.style.marginTop = "15px";
-            
+
             formNewsletter.appendChild(mensagemSucesso);
             formNewsletter.reset();
 
@@ -60,15 +61,15 @@ if (formNewsletter) {
 
         } catch (erro) {
             console.error("Erro ao salvar inscrição:", erro);
-            
+
             const mensagemErro = document.createElement("p");
             mensagemErro.innerHTML = "Puxa, ocorreu um erro de conexão. Tente novamente em alguns instantes.";
             mensagemErro.style.color = "var(--cor-tinta)";
             mensagemErro.style.fontFamily = "var(--fonte-padrao)";
             mensagemErro.style.marginTop = "15px";
-            
+
             formNewsletter.appendChild(mensagemErro);
-            
+
             setTimeout(() => {
                 mensagemErro.remove();
             }, 5000);
