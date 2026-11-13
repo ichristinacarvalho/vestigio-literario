@@ -22,8 +22,8 @@ Bem-vindo ao repositório oficial do **Vestígio Literário**, uma plataforma di
 Este projeto foi construído utilizando as seguintes tecnologias e ferramentas:
 
 * **HTML5 / CSS3 / JavaScript (ES6+)**: Estruturação, estilização e interatividade da interface web.
-* **Firebase (Firestore / Authentication)**: Banco de dados e serviços em nuvem para gerenciamento de dados.
+* **Firebase**: Banco de dados e serviços em nuvem para gerenciamento de dados.
 * **n8n**: Plataforma de automação de fluxo de trabalho para gerenciar as regras de envio de e-mails.
-* **Git & GitHub / GitHub Actions**: Controle de versão, hospedagem e automação de deploys.
+* **Git & GitHub**: Controle de versão, hospedagem e automação de deploys.
 * **Vercel Serverless Functions (Node.js):** Criação de API própria para rodar o backend da aplicação sob demanda.
 * **Nodemailer:** Integração com SMTP do Gmail para envio automatizado de e-mails.
