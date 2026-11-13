@@ -1,5 +1,9 @@
 # 📚 Vestígio Literário
 
+![Página inicial do Vestígio Literário](img/preview.png)
+
+=> <a href="https://vestigio-literario.vercel.app/">Acesse o site</a>
+
 Bem-vindo ao repositório oficial do **Vestígio Literário**, uma plataforma digital voltada para o universo da leitura, compartilhamento de conteúdos e experiências literárias. Este projeto conta com uma arquitetura moderna que une front-end responsivo, banco de dados em nuvem e fluxos automatizados de comunicação.
 
 ---
