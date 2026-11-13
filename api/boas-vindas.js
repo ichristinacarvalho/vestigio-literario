@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-// Endereços que podem chamar esta API.
+// Endereços que podem chamar esta API (o próprio site).
 const ORIGENS_PERMITIDAS = [
     'https://vestigio-literario.vercel.app',
     'http://localhost:3000'
