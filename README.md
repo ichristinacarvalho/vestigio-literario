@@ -14,7 +14,8 @@ Bem-vindo ao repositório oficial do **Vestígio Literário**, uma plataforma di
 * **Armazenamento com Firebase**: Utilizado para gerenciar dados em tempo real e persistência de informações dos usuários/conteúdos.
 * **Automação de E-mails com n8n**: Integração de fluxos automatizados para disparos e notificações de e-mails de forma dinâmica e eficiente.
 * **Sistema de Newsletter Serverless:** Formulário de captação de leitores que salva os dados no Firestore e aciona uma rota de API no Vercel (backend) para o disparo imediato de um e-mail elegante de boas-vindas, sem depender de servidores ligados 24/7.
-  
+* **E-mail de boas-vindas:** ao se inscrever, o leitor é salvo no Firestore e uma função serverless na Vercel envia o e-mail com Nodemailer.
+* **Aviso de novas resenhas:** um fluxo no n8n envia um e-mail aos inscritos quando uma resenha nova é publicada.
 ---
 
 ## 🛠️ Tecnologias Utilizadas
